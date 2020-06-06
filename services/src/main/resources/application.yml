@@ -1,13 +1,24 @@
 server:
   port: 8090
 
-spring:
-  application:
-    name: services
-
 eureka:
+  instance:
+    hostname: dinner-service0
   client:
     registerWithEureka: false
     fetchRegistry: false
     service-url:
-      defaultZone: http://${spring.application.name}:${server.port}
+      defaultZone: http://dinner-service1:8091/eureka,http://dinner-service0:8090/eureka
+
+---
+server:
+  port: 8091
+
+eureka:
+  instance:
+    hostname: dinner-service1
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    service-url:
+      defaultZone: http://dinner-service0:8090/eureka,http://dinner-service1:8091/eureka
