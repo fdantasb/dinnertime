@@ -1,4 +1,4 @@
-package br.com.fdantasb.services.services;
+package br.com.fdantasb.services;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
