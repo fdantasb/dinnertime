@@ -8,17 +8,16 @@ eureka:
     registerWithEureka: false
     fetchRegistry: false
     service-url:
-      defaultZone: http://dinner-service1:8091/eureka,http://dinner-service0:8090/eureka
-
+      defaultZone: http://dinner-service0:8090/eureka
 ---
-server:
-  port: 8091
-
-eureka:
-  instance:
-    hostname: dinner-service1
-  client:
-    registerWithEureka: false
-    fetchRegistry: false
-    service-url:
-      defaultZone: http://dinner-service0:8090/eureka,http://dinner-service1:8091/eureka
+#server:
+#  port: 8091
+#
+#eureka:
+#  instance:
+#    hostname: dinner-service1
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: false
+#    service-url:
+#      defaultZone: http://dinner-service0:8090/eureka,http://dinner-service1:8091/eureka
